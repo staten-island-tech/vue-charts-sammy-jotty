@@ -1,4 +1,4 @@
-import getAllData from './getAllData.js'
+// import getAllData from './getAllData.js'
 import applyFilter from './applyFilter.js'
 
 export default function applyFilters(initial_dataset, filters) {
