@@ -1,5 +1,5 @@
-import {ApplyFilters} from '@/api/applyMultipleFilters.js'
-let dataset = ApplyFilters(initial_dataset, filters)
+import {applyFilters} from '@/api/applyMultipleFilters.js'
+let dataset = applyFilters(initial_dataset, filters)
 
 export const data = {
     labels: filters,
