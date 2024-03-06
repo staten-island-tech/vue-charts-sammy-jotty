@@ -1,39 +1,31 @@
-import getAllData from './getAllData'
-import {
-  getAllOfMatchingAgeGroup,
-  getAllOfMatchingBorough,
-  getAllOfMatchingCrime,
-  getAllOfMatchingSex,
-  getAllOfMatchingRace
-} from './dataFilters'
+import getAllData from './getAllData.js'
+import applyFilter from './applyFilter.js'
 
 export default function applyFilters(initial_dataset, filters) {
   let dataset = initial_dataset
   filters.forEach((filter) => {
-    switch (filter.type) {
-      case 'ageGroup':
-        dataset = getAllOfMatchingAgeGroup(dataset, filter.value)
-      case 'borough':
-        dataset = getAllOfMatchingBorough(dataset, filter.value)
-      case 'crime':
-        dataset = getAllOfMatchingCrime(dataset, filter.value)
-      case 'sex':
-        dataset = getAllOfMatchingSex(dataset, filter.value)
-      case 'race':
-        dataset = getAllOfMatchingSex(dataset, filter.value)
-    }
+    dataset = applyFilter(dataset, filter.type, filter.value)
   })
 
   return dataset
 }
 
-// const test_dataset = [
+// const test_filters = [
 //   {
-//     type: 'race',
-//     value: 'white'
+//     type: 'perp_race',
+//     value: 'whit'
 //   },
 //   {
-//     type: 'ageGroup',
+//     type: 'age_group',
 //     value: '18-24'
+//   },
+//   {
+//     type: 'pd_desc',
+//     value: 'MURDER'
 //   }
 // ]
+
+// const data = await getAllData()
+// const filteredData = applyFilters(data, test_filters)
+
+// console.log(filteredData)
