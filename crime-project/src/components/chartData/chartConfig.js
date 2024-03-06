@@ -1,7 +1,8 @@
-import {filter} from '@'
+import {ApplyFilters} from '@/api/applyMultipleFilters.js'
+let dataset = ApplyFilters(initial_dataset, filters)
 
 export const data = {
-    labels: filter,
+    labels: filters,
     datasets: [
       {
         backgroundColor: ['#41B883', '#E46651', '#00D8FF', '#DD1B16'],
