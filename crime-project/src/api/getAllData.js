@@ -1,6 +1,6 @@
-import { config } from 'dotenv'
-config()
-const URL = process.env.API_URL
+// import { config } from 'dotenv'
+// config()
+const URL = 'https://data.cityofnewyork.us/resource/uip8-fykc.json'
 
 export default async function getAllData() {
   const response = await fetch(URL)

@@ -1,5 +1,14 @@
 import applyFilters from '@/api/applyMultipleFilters.js'
-let dataset = ApplyFilters(initial_dataset, filters)
+import getAllData from '@/api/getAllData'
+data = await getAllData()
+
+filters = [
+  {
+    perp_race: 'White'
+  }
+]
+
+let dataset = applyFilters(data, filters)
 
 export const data = {
   labels: filters,
