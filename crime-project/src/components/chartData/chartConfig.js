@@ -1,22 +1,22 @@
 import applyFilters from '@/api/applyMultipleFilters.js'
 import getAllData from '@/api/getAllData'
-responseData = await getAllData()
+const crime_data = await getAllData()
 
-filters = [
+const filters = [
   {
-    perp_race: 'White'
+    type: 'perp_race',
+    value: 'white'
   }
 ]
 
-let dataset = applyFilters(responseData, filters)
-
 export const data = {
-  labels: filters,
+  labels: ['White', 'Black'],
   datasets: [
     {
-      backgroundColor: ['#41B883', '#E46651', '#00D8FF', '#DD1B16'],
-      data: [40, 20, 80, 10]
-    }
+      label:['Arrests'],
+      backgroundColor: ['#E46651','#246655'],
+      data: [40,10]
+    },
   ]
 }
 

@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "audit": "^0.0.6",
-    "chart.js": "^4.4.2",
+    "chartjs": "^0.3.24",
     "dotenv": "^16.4.5",
     "pinia": "^2.1.7",
     "vue": "^3.4.15",

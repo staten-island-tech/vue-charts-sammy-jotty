@@ -1,4 +1,4 @@
-// import getAllData from './getAllData.js'
+import getAllData from './getAllData.js'
 import applyFilter from './applyFilter.js'
 
 export default function applyFilters(initial_dataset, filters) {
@@ -13,7 +13,7 @@ export default function applyFilters(initial_dataset, filters) {
 // const test_filters = [
 //   {
 //     type: 'perp_race',
-//     value: 'whit'
+//     value: 'black'
 //   },
 //   {
 //     type: 'age_group',
@@ -21,7 +21,7 @@ export default function applyFilters(initial_dataset, filters) {
 //   },
 //   {
 //     type: 'pd_desc',
-//     value: 'MURDER'
+//     value: 'robbery'
 //   }
 // ]
 
