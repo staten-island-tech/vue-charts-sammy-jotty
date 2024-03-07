@@ -1,4 +1,4 @@
-// import getAllData from './getAllData.js'
+import getAllData from './getAllData.js'
 import applyFilter from './applyFilter.js'
 
 export default function applyFilters(initial_dataset, filters) {
@@ -10,22 +10,22 @@ export default function applyFilters(initial_dataset, filters) {
   return dataset
 }
 
-// const test_filters = [
-//   {
-//     type: 'perp_race',
-//     value: 'whit'
-//   },
-//   {
-//     type: 'age_group',
-//     value: '18-24'
-//   },
-//   {
-//     type: 'pd_desc',
-//     value: 'MURDER'
-//   }
-// ]
+const test_filters = [
+  {
+    type: 'perp_race',
+    value: 'black'
+  },
+  {
+    type: 'age_group',
+    value: '18-24'
+  },
+  {
+    type: 'pd_desc',
+    value: 'robbery'
+  }
+]
 
-// const data = await getAllData()
-// const filteredData = applyFilters(data, test_filters)
+const data = await getAllData()
+const filteredData = applyFilters(data, test_filters)
 
-// console.log(filteredData)
+console.log(filteredData)
