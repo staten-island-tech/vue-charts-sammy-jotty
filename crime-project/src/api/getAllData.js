@@ -1,5 +1,3 @@
-// import { config } from 'dotenv'
-// config()
 const URL = 'https://data.cityofnewyork.us/resource/uip8-fykc.json'
 
 export default async function getAllData() {
