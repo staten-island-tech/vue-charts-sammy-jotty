@@ -4,28 +4,23 @@ import applyFilter from './applyFilter.js'
 export default function applyFilters(initial_dataset, filters) {
   let dataset = initial_dataset
   filters.forEach((filter) => {
-    dataset = applyFilter(dataset, filter.type, filter.value)
+    if (filter.values) dataset = applyFilter(dataset, filter.type, filter.values)
   })
 
   return dataset
 }
 
-// const test_filters = [
-//   {
-//     type: 'perp_race',
-//     value: 'black'
-//   },
-//   {
-//     type: 'age_group',
-//     value: '18-24'
-//   },
-//   {
-//     type: 'pd_desc',
-//     value: 'robbery'
-//   }
-// ]
+const test_filters = [
+  {
+    type: 'perp_race',
+    values: ['asian', 'white']
+  },
+  {
+    type: 'pd_desc',
+    values: ['robbery']
+  }
+]
 
 // const data = await getAllData()
-// const filteredData = applyFilters(data, test_filters)
-
+// const filteredData = await applyFilters(data, test_filters)
 // console.log(filteredData)
