@@ -1,7 +1,10 @@
-export default function applyFilter(dataset, filter, value) {
+export default function applyFilter(dataset, filter, values) {
+  // console.log(values)
   const matchingData = dataset.filter((incident) => {
     if (incident[filter]) {
-      return incident[filter].toLowerCase().includes(value.toLowerCase())
+      return values.some((value) => {
+        return incident[filter].toLowerCase().includes(value.toLowerCase())
+      })
     } else {
       return false
     }
