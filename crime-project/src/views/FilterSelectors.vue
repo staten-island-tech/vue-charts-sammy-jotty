@@ -5,7 +5,7 @@ import DataFilterCheckbox from '@/components/DataFilterCheckbox.vue'
 
 <template>
   <div>
-    <!-- <DataFilterSelect :options="['WHITE', 'BLACK', 'HISPANIC']" type="perp_race" /> -->
-    <DataFilterCheckbox type="perp_race" />
+    <DataFilterSelect :options="['WHITE', 'BLACK', 'HISPANIC']" type="perp_race" />
+    <!-- <DataFilterCheckbox type="perp_race" /> -->
   </div>
 </template>

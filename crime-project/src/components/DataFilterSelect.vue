@@ -36,6 +36,5 @@ watch(value, () => {
     >
       {{ props.type }}
     </label>
-    {{ filterStore.allFilters }}
   </div>
 </template>
