@@ -1,5 +1,5 @@
 import applyFilters from '@/api/applyMultipleFilters.js'
-import getAllData from '@/api/getAllData'
+import getAllData from '@/api/getAllData.js'
 const crime_data = await getAllData()
 
 const filters = [

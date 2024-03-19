@@ -54,3 +54,4 @@ watch(selected, () => {
     </label>
   </div>
 </template>
+@/api/getAllData.mjs

@@ -38,3 +38,4 @@ watch(value, () => {
     </label>
   </div>
 </template>
+@/api/getAllData.mjs
