@@ -1,5 +1,6 @@
-import applyFilters from '../../api/applyMultipleFilters.js'
-import getAllData from '../../api/getAllData.js'
+import applyFilters from '@/api/applyMultipleFilters.js'
+import getAllData from '@/api/getAllData.js'
+import decompressData from '@/api/decompressData.js'
 const crime_data = await getAllData()
 const filters = [
   {
@@ -9,19 +10,19 @@ const filters = [
 ]
 
 const filteredData = await applyFilters(crime_data,filters)
-
-
+const decompressedData = decompressData(filteredData, 'arrest_date')
+console.log(decompressedData)
 export const data = {
-  labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+  labels: [],
   datasets: [
     {
       label: 'Arrests',
       backgroundColor: '#f87979',
-      data: [40, 39, 10, 40, 39, 80, 40]
+      data: Object.values(decompressedData),
     }
   ]
 }
-
+filters.forEach((filter)=>filter.values.forEach((value)=>data.labels.push(value)))
 export const options = {
   responsive: true,
   maintainAspectRatio: false

@@ -13,18 +13,18 @@ const filteredData = await applyFilters(crime_data,filters)
 const decompressedData = decompressData(filteredData, 'age_group')
 console.log(Object.values(decompressedData))
 export const data = {
-  labels: [],
-  datasets: [
-    {
-      label:['Arrests'],
-      backgroundColor: ['#E46651','#246655','#E33655'],
-      data: Object.values(decompressedData),
-    },
-    
-  ]
-}
+    labels: [],
+    datasets: [
+      {
+        label: 'Arrests',
+        backgroundColor: '#f87979',
+        data: Object.values(decompressedData)
+      }
+    ]
+  }
+  
+  export const options = {
+    responsive: true,
+    maintainAspectRatio: false
+  }
 filters.forEach((filter)=>filter.values.forEach((value)=>data.labels.push(value)))
-export const options = {
-  responsive: true,
-  maintainAspectRatio: false
-}
