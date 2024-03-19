@@ -3,8 +3,8 @@ import getAllData from '../../api/getAllData.js'
 const crime_data = await getAllData()
 const filters = [
   {
-    type:'age_group',
-    values:['18-24','25-44','45-64'],
+    type:'arrest_date',
+    values:['2023-01','2023-02','2023-03','2023-04','2023-05','2023-06','2023-07','2023-08','2023-09','2023-10','2023-11','2023-12'],
   }
 ]
 
