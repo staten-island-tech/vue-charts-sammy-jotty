@@ -1,7 +1,5 @@
 <script setup>
 import { ref, watch } from 'vue'
-import getAllData from '@/api/getAllData'
-import applyFilters from '@/api/applyMultipleFilters'
 import { useFilterStore } from '@/stores/filterStore'
 
 const filterStore = useFilterStore()

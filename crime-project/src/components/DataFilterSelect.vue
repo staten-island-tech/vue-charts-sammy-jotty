@@ -1,25 +1,14 @@
 <script setup>
 import { ref, watch } from 'vue'
-import getAllData from '@/api/getAllData'
-import applyFilters from '@/api/applyMultipleFilters'
 import { useFilterStore } from '@/stores/filterStore'
 
 const filterStore = useFilterStore()
 
 const props = defineProps(['type', 'options'])
 const value = ref(props.options[0])
-// watch(value, async () => {
-//   const data = await getAllData()
-//   const filtered_data = applyFilters(data, [
-//     {
-//       type: props.type,
-//       value: value.value
-//     }
-//   ])
-//   console.log(filtered_data)
-// })
+
 watch(value, () => {
-  filterStore.addFilterFromSelect(props.type, value.value)
+  filterStore.addFilterFromSelect(props.type, [value.value])
 })
 </script>
 
