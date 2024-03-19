@@ -19,7 +19,7 @@ const value = ref(props.options[0])
 //   console.log(filtered_data)
 // })
 watch(value, () => {
-  filterStore.addFilter(props.type, value.value)
+  filterStore.addFilterFromSelect(props.type, value.value)
 })
 </script>
 
@@ -36,6 +36,6 @@ watch(value, () => {
     >
       {{ props.type }}
     </label>
-    {{ filterStore.allFilters }}
   </div>
 </template>
+@/api/getAllData.mjs
