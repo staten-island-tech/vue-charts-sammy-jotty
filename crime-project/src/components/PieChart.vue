@@ -7,7 +7,7 @@
 <script>
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js'
 import { Pie } from 'vue-chartjs'
-import * as chartConfig from "../components/chartData/chartConfig.js"
+import * as chartConfig from "./chartData/PieChartConfig"
 
 ChartJS.register(ArcElement, Tooltip, Legend)
 
