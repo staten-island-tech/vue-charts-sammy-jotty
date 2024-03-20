@@ -4,16 +4,16 @@ import decompressData from '@/api/decompressData.js'
 const crime_data = await getAllData()
 const filters = [
   {
-    type:'age_group',
-    values:['18-24','25-44','45-64'],
+    type:'perp_race',
+    values:['black','unknown','asian','white','american indian'],
   }
 ]
 
 const filteredData = await applyFilters(crime_data,filters)
-const decompressedData = decompressData(filteredData, 'age_group')
-console.log(Object.values(decompressedData))
+const decompressedData = decompressData(filteredData, 'perp_race')
+
 export const data = {
-  labels: [],
+  labels: Object.keys(decompressedData),
   datasets: [
     {
       label:['Arrests'],
@@ -23,7 +23,6 @@ export const data = {
     
   ]
 }
-filters.forEach((filter)=>filter.values.forEach((value)=>data.labels.push(value)))
 export const options = {
   responsive: true,
   maintainAspectRatio: false
