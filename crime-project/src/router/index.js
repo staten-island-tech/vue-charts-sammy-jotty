@@ -18,6 +18,22 @@ const router = createRouter({
       component: () => import('../components/PieChart.vue')
     },
     {
+      path: '/radarchart',
+      name: 'RadarChart',
+      // route level code-splitting
+      // this generates a separate chunk (About.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import('../components/RadarChart.vue')
+    },
+    {
+      path: '/barchart',
+      name: 'BarChart',
+      // route level code-splitting
+      // this generates a separate chunk (About.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import('../components/BarChart.vue')
+    },
+    {
       path: '/test',
       name: 'FilterSelectors',
       // route level code-splitting
