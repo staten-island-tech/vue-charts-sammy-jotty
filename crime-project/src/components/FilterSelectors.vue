@@ -1,7 +1,7 @@
 <script setup>
-import DataFilterCheckbox from '../components/DataFilterCheckbox.vue'
-import DataFilterSelect from '@/components/DataFilterSelect.vue'
-import options from '../components/filterOptions.js'
+import DataFilterCheckbox from './DataFilterCheckbox.vue'
+import DataFilterSelect from './DataFilterSelect.vue'
+import options from './filterOptions.js'
 const optionsKeys = Object.keys(options)
 </script>
 
