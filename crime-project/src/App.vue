@@ -7,10 +7,10 @@ import { RouterLink, RouterView } from 'vue-router'
     <div class="wrapper">
       <nav>
         <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/piechart">PieChart</RouterLink>
-        <RouterLink to="/radarchart">RadarChart</RouterLink>
-        <RouterLink to="/barchart">BarChart</RouterLink>
-        <RouterLink to="/linechart">LineChart</RouterLink>
+        <RouterLink to="/piechart">Arrests by Demographics (Age)</RouterLink>
+        <RouterLink to="/radarchart">Arrests by Borough</RouterLink>
+        <RouterLink to="/barchart">Arrests by Demographics (Race)</RouterLink>
+        <RouterLink to="/linechart">Arrests by Month</RouterLink>
       </nav>
     </div>
   </header>

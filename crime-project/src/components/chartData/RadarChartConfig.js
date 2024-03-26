@@ -4,8 +4,8 @@ import decompressData from '@/api/decompressData.js'
 const crime_data = await getAllData()
 const filters = [
   {
-    type:'perp_race',
-    values:['black','unknown','asian','white','american indian'],
+    type:'arrest_boro',
+    values:['B','K','M','Q','S'],
   }
 ]
 let filterType = []
