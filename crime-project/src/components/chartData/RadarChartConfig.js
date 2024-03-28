@@ -14,7 +14,7 @@ const filteredData = await applyFilters(crime_data,filters)
 const decompressedData = decompressData(filteredData, filterType)
 console.log(decompressedData)
 export const data = {
-  labels: Object.keys(decompressedData),
+  labels: ['Bronx','Staten Island','Brooklyn','Queens','Manhattan'],
   datasets: [
     {
       label: 'Arrests',
